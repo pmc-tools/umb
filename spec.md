@@ -154,7 +154,7 @@ The UMB format uses 3 types of binary files:
 
 **Representation:** A file consisting of `n+1` sequential `uint64` values, with `file[i]_8 = l_i` for `i<n` and `file[n]_8 = u_(n-1) + 1`.
 
-**Default:** If a specified CSR file is absent: Every applicable index `i` is mapped to `i,i]`, unless noted otherwise.
+**Default:** If a specified CSR file is absent: Every applicable index `i` is mapped to `[i,i]`, unless noted otherwise.
 
 **Example:** Suppose we map state indices to choice indices. If state 0 has 2 choices, state 1 has 3 choices, and state 2 has 4 choices, we store `0 2 5 9`, corresponding to intervals `[0,1]`, `[2,3,4]`, `[5,6,7,8]` of indices to the total list of 9 choices.
 
@@ -258,33 +258,33 @@ _Must be absent if `"branch-values"` is `"none"` (e.g. an LTS)._
 
 Actions can be assigned to choices and branches. The choice actions are `0, ...,n-1` where `n` is the value of property `#choice-actions` in `index.json`. Each choice action can optionally be given a string label. This applies for branch actions analogously. Storage, described below, is as for a standard string annotation to choices/branches, except that the strings themselves can optionally be omitted.
 
-Choice actions are in `/actions/choices`:
+Choice actions are in the following files in folder `/actions/choices`:
 
-`/actions/choices/values.bin`  
-TO1 mapping: choice \-\> action (`uint32`)  
+`values.bin`  
+TO1 mapping: choice \-\> choice action (`uint32`)  
 _Must be omitted if `#choice-actions = 0`; otherwise, if omitted, each choice is mapped to choice action 0\._
 
-`/actions/choices/string-mapping.bin`  
-CSR mapping: action \-\> interval(bytes)  
-_Maps into choice-action-strings.bin. The interval must make up a valid UTF-8 string. Must be omitted if `#choice-actions = 0`; otherwise, if omitted, no string labels are provided for choice actions._
+`string-mapping.bin`  
+CSR mapping: choice action \-\> interval(bytes)  
+_Maps into `strings.bin`. The interval must make up a valid UTF-8 string. Must be omitted if `#choice-actions = 0`; otherwise, if omitted, no string labels are provided for choice actions._
 
-`/actions/choices/strings.bin`  
-SEQ: sequence of UTF-8 strings whose bytes are mapped into by `string-mapping.bin`.
-_Must be present if and only if `string-mapping` is present._
+`strings.bin`  
+SEQ: sequence of UTF-8 strings whose bytes `string-mapping.bin` maps into
+_Must be present if and only if `string-mapping.bin` is present._
 
-Branch actions are in `/actions/branches`:
+Branch actions are in the following files in folder `/actions/branches`, following the same pattern as choice actions:
 
-`/actions/branches/values.bin`  
+`values.bin`  
 TO1 mapping: branch \-\> action (uint32)  
 _Must be omitted if `#branch-actions = 0`; otherwise, if omitted, each branch is mapped to branch action 0\._
 
-`/actions/branches/string-mapping.bin`  
+`string-mapping.bin`  
 CSR mapping: branch \-\> interval(bytes)  
-_Maps into branch-action-strings.bin. The interval must make up a valid UTF-8 string. Must be omitted if `#branch-actions = 0`; otherwise, if omitted, no strings are provided for branch actions._
+_Maps into `strings.bin`. The interval must make up a valid UTF-8 string. Must be omitted if `#branch-actions = 0`; otherwise, if omitted, no strings are provided for branch actions._
 
-`/actions/branches/strings.bin`  
-SEQ: sequence of UTF-8 strings whose bytes branch-action-to-string.bin maps into.  
-_Must be present if and only if `string-mapping` is present._
+`strings.bin`  
+SEQ: sequence of UTF-8 strings whose bytes `string-mapping.bin` maps into  
+_Must be present if and only if `string-mapping.bin` is present._
 
 ### 5\. Observations
 
