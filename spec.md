@@ -275,11 +275,11 @@ _Must be present if and only if `string-mapping.bin` is present._
 Branch actions are in the following files in folder `/actions/branches`, following the same pattern as choice actions:
 
 `values.bin`  
-TO1 mapping: branch \-\> action (uint32)  
+TO1 mapping: branch \-\> branch action (uint32)  
 _Must be omitted if `#branch-actions = 0`; otherwise, if omitted, each branch is mapped to branch action 0\._
 
 `string-mapping.bin`  
-CSR mapping: branch \-\> interval(bytes)  
+CSR mapping: branch action \-\> interval(bytes)  
 _Maps into `strings.bin`. The interval must make up a valid UTF-8 string. Must be omitted if `#branch-actions = 0`; otherwise, if omitted, no strings are provided for branch actions._
 
 `strings.bin`  
