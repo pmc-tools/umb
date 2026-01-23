@@ -227,16 +227,16 @@ TO1: state \-\> player (type `uint32`)
 _Does not apply and must be omitted if `#players = 0`\. Can be omitted if every state is controlled by player 0 (e.g. when `#players = 1`\) (due to TO1 default). If present, file size must be `#states  * 4` bytes._
 
 `/state-is-initial.bin`  
-TO1: state \-\> is initial? (type `bool`)
+TO1: state \-\> is initial? (type `bool`)  
 _If omitted, no state is initial. If present, file size must be `ceil((#states / 64)) * 8` bytes._
 
 `/state-is-markovian.bin`  
-TO1: state \-\> is Markovian? (type `bool`)
-_If omitted, every state is mapped to true if time \= stochastic and to false otherwise. If not Markovian, a state is probabilistic. Each Markovian state must have at most 1 choice. If present, file size must be ⌈(#states / 64)⌉ \* 8 bytes._
+TO1: state \-\> is Markovian? (type `bool`)  
+_Does not apply and must be omitted unless `"time"` is `"urgent-stochastic"`. If omitted and `"time"` is `"urgent-stochastic"`, every state is mapped to false. If not Markovian, a state is probabilistic. Each Markovian state must have at most 1 choice. If present, file size must be ⌈(`#states` / 64)⌉ \* 8 bytes._
 
 `/state-to-exit-rate.bin`  
-TO1: state \-\> exit rate (type defined in `index.json`)
-_Note: Does not apply and must be omitted if `"time"` is `"discrete".` If `"time"` is `"urgent-stochastic"`, then the exit rates for non-Markovian states can be anything and must be ignored._
+TO1: state \-\> exit rate (type defined in `index.json`)  
+_Does not apply and must be omitted if `"time"` is `"discrete"`. If `"time"` is `"urgent-stochastic"`, then the exit rates for non-Markovian states can be anything and must be ignored._
 
 ### 2\. Choices (nondeterminism)
 
@@ -251,7 +251,7 @@ TO1 mapping: branch \-\> state (`uint64`)
 _Note: This allows the same state-action-target triple to occur multiple times, which is intended._
 
 `/branch-to-probability.bin`  
-TO1 mapping: branch \-\> probability (type defined in `index.json`)
+TO1 mapping: branch \-\> probability (type defined in `index.json`)  
 _Must be absent if `"branch-values"` is `"none"` (e.g. an LTS)._
 
 ### 4\. Action labels
@@ -269,7 +269,7 @@ CSR mapping: choice action \-\> interval(bytes)
 _Maps into `strings.bin`. The interval must make up a valid UTF-8 string. Must be omitted if `#choice-actions = 0`; otherwise, if omitted, no string labels are provided for choice actions._
 
 `strings.bin`  
-SEQ: sequence of UTF-8 strings whose bytes `string-mapping.bin` maps into
+SEQ: sequence of UTF-8 strings whose bytes `string-mapping.bin` maps into  
 _Must be present if and only if `string-mapping.bin` is present._
 
 Branch actions are in the following files in folder `/actions/branches`, following the same pattern as choice actions:
@@ -303,7 +303,7 @@ An annotation is stored in folder `/annotations/<group>/<id>` and contains one o
 TO1: entity \-\> annotation value (type defined in `index.json`)
 
 `string-mapping.bin`  
-CSR mapping: string index \-\> interval of bytes in `strings.bin`.
+CSR mapping: string index \-\> interval of bytes in `strings.bin`.  
 _The interval must make up a valid UTF-8 string. Must be present if and only if the annotation's type is `string`._
 
 `strings.bin`  
