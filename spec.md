@@ -114,7 +114,8 @@ var Annotation = schema({
   "?lower": Number.min(-2^63).max(2^63-1).step(1), // lower bound for the values of the annotation, for numeric types, omit if the bound does not fit into int64  
   "?upper": Number.min(-2^63).max(2^63-1).step(1), // upper bound for the values of the annotation, for numeric types, omit if the bound does not fit into int64  
   "?#strings": Number.min(1).max(2^32-1).step(1), // must be present iff the type of the annotation is "string" and indicates the number of strings used  
-  "?probability-type": Type, // must be present iff that the annotation represents a distribution over values (as used in stochastic observations), with probabilities provided using this type, which must be continuous numeric and of the default size (given explicitly as the value for size or implicitly by omitting size) except for types "rational" and "rational-interval", for which the size must be a positive multiple of 128 and 256, respectively  
+  "?probability-type": Type, // must be present iff the annotation stores distributions over values (as used in stochastic observations), with probabilities provided using this type, which must be continuous numeric and of the default size (given explicitly as the value for size or implicitly by omitting size) except for types "rational" and "rational-interval", for which the size must be a positive multiple of 128 and 256, respectively
+  "?#probabilities": Number.min(1).max(2^63-1).step(1) // must be present if probability-type is present, and gives the sum of the supports of all distributions
 };
 
 var ValuationDescription = schema({  
