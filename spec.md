@@ -1,3 +1,9 @@
+---
+title: Specification of the UMB Format
+date: 01/26/2026
+description: Overall specification of the unified Markov binary format.
+published: true
+---
 # Specification of the UMB Format
 
 Models specified in the UMB ("unified Markov binary") format consist of a folder structure containing a set of files with well-defined names (containing characters `[a-z][0-9][-_]` plus a single `.` only) in well-defined locations. For transporting models, that folder structure is bundled in a tar file that is optionally compressed using gzip or xz. The file extension for both compressed and uncompressed tar files of this format is `.umb`. Tools can look at the magic bytes at the beginning of the file to detect the format: big-endian `75 73 74 61 72` at offset 257 for POSIX tar, `1F 8B 08` for gzip or `FD 37 7A 58 5A 00` for xz.
