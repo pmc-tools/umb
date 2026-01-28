@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>The Unified Model Binary Format</title>
+
+		<link href="./_app/immutable/assets/0.CTWn1aWY.css" rel="stylesheet">
+		<link href="./_app/immutable/assets/Button.BGl4zSNC.css" rel="stylesheet">
+		<link href="./_app/immutable/assets/7.YQR0oU_0.css" rel="stylesheet">
+		<link rel="modulepreload" href="./_app/immutable/entry/start.YitcgU9W.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/hjUjaVub.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/Dwu8Ck43.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/CLTqvKWG.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/D0iwhpLH.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/CrGcBvKj.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/BgPb-EuE.js">
+		<link rel="modulepreload" href="./_app/immutable/entry/app.BJPbCFXA.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/BQo6OqOv.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/EdPZLQ7C.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/Bq0eJJNz.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/DOarqXuo.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/DajOXZ9i.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/Bkgstq1j.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/BPc-ykxE.js">
+		<link rel="modulepreload" href="./_app/immutable/nodes/0.B5OrwuZW.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/CCN1Y69L.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/CP9jtjPq.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/CzNagXiF.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/C4tcWgQn.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/CYekDBCk.js">
+		<link rel="modulepreload" href="./_app/immutable/nodes/7.eZXfK7-4.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/wsf2fmSx.js"><!--12qhfyh--><link rel="stylesheet" href="styles.css"/> <link rel="icon" href="/_app/immutable/assets/favicon.DWX4Q9z0.svg"/><!---->
+	</head>
+	<body data-sveltekit-preload-data="hover">
+		<div style="display: contents"><!--[--><!--[--><!----><nav class="svelte-11lpkcp"><div class="inner svelte-11lpkcp"><div id="logo-container" class="svelte-11lpkcp"><img src="logo_flat.svg" height="30px" id="logo-icon" class="svelte-11lpkcp"/><a id="logo" href="./" class="svelte-11lpkcp">UMB</a></div> <div class="mobile-icon svelte-11lpkcp"><div class="middle-line svelte-11lpkcp"></div></div> <ul class="navbar-list svelte-11lpkcp"><li id="logo-mobile" class="svelte-11lpkcp"><a href="./" class="svelte-11lpkcp">Home</a></li> <!--[--><li class="svelte-11lpkcp"><a href="umbi" class="svelte-11lpkcp">UMBI</a></li><li class="svelte-11lpkcp"><a href="tools" class="svelte-11lpkcp">Tools</a></li><li class="svelte-11lpkcp"><a href="observatory" class="svelte-11lpkcp">Observatory</a></li><li class="svelte-11lpkcp"><a href="spec" class="svelte-11lpkcp">Standard</a></li><!--]--></ul></div></nav><!----> <!----><div class="content"><h1>Many Tools Support the UMB Format</h1> <div class="cards svelte-171l7w4"><div class="card svelte-171l7w4"><a class="tool-logo svelte-171l7w4" href="https://stormchecker.org"><img class="tool-logo svelte-171l7w4" src="toolLogos/storm.svg"/></a> <p>Storm (version 1.12) integrates UMB support (either compressed or uncompressed) for import and export of Markov automata, stochastic games, POMDPs and all their special cases, including interval- or rational-valued transitions and including rich annotations on states and observations. The support is deeply embedded and thus Storm provides an interface also to, e.g., fault trees or Petri nets, or can be used to provide, e.g., bisimulation quotients of models.</p> <a class="button svelte-118lylz" href="https://stormchecker.org"><!--[--><!---->Visit Site<!--]--></a><!----></div> <div class="card svelte-171l7w4"><a class="tool-logo svelte-171l7w4" href="#"><img class="tool-logo svelte-171l7w4" src="toolLogos/modest.svg"/></a> <p>In the Modest toolset, the <code>mcsta</code> probabilistic model checker has been rebuilt around the UMB format.
+Its internal data structures match the files and binary representation of UMB, allowing <code>mcsta</code> to load UMB files by simply mapping them into memory via <code>mmap</code>.
+It supports reading UMB files encoding LTSs, DTMCs, CTMCs, MDPs, and MAs, and can generate files for such models
+given in JANI or the Modest language.
+As working with unchecked pointers/array indexing on untrusted UMB data could easily create security vulnerabilities, <code>mcsta</code> includes a strict UMB validator that thoroughly checks the metadata and binary files for semantic consistency and data ranges.</p> <a class="button svelte-118lylz" href="#"><!--[--><!---->Visit Site<!--]--></a><!----></div> <div class="card svelte-171l7w4"><a class="tool-logo svelte-171l7w4" href="https://prismmodelchecker.org"><img class="tool-logo svelte-171l7w4" src="toolLogos/prism.svg"/></a> <p>PRISM, as of version 4.10, provides UMB import and export for all models supported by both the tool and the format, notably Markov chains, MDP and POMDPs, interval variants of all these, and LTSs.
+This includes rewards, atomic propositions, valuations for states/observations
+and either floating point or exact arithmetic models.
+PRISM-games, as of version 3.2.2, provides the same functionality for turn-based stochastic games.
+Support for reading and writing UMB files has been implemented as a standalone Java library <code>umbj</code>.</p> <a class="button svelte-118lylz" href="https://prismmodelchecker.org"><!--[--><!---->Visit Site<!--]--></a><!----></div> <div class="card svelte-171l7w4"><b>Other tools</b>: The tools Paynt, Stormvogel and STAMINA use parts of Storm, and thus can also now import and export <code>.umb</code> files.
+Similarly, PET, which uses Prism's input parser, will support UMB through Prism's <code>umbj</code> library.</div></div></div><!----><!----> <footer class="svelte-9sff3o"><p>The UMB standard is an open probabilistic model checking standard for explicit representation of DTMCs, CTMCs, MDPs, POMDPs, etc. Any tool is free to implement the standard, and we encourage its adoption. The authors of this standard would like to acknowlege the <a href="https://www.dagstuhl.de/">Schloss Dagstuhl</a> venue, where the idea for UMB and UMBI was initially concieved.</p> <p>This website was designed and is maintained by <a href="https://jeppson.dev">Josh Jeppson</a>. It is licensed under the GPLv3, and its source code is available on <a href="https://github.com/pmc-dev/umb">GitHub</a>.</p></footer><!----><!----><!--]--> <!--[!--><!--]--><!--]-->
+
+			<script>
+				{
+					__sveltekit_ofn54h = {
+						base: new URL(".", location).pathname.slice(0, -1)
+					};
+
+					const element = document.currentScript.parentElement;
+
+					Promise.all([
+						import("./_app/immutable/entry/start.YitcgU9W.js"),
+						import("./_app/immutable/entry/app.BJPbCFXA.js")
+					]).then(([kit, app]) => {
+						kit.start(app, element, {
+							node_ids: [0, 7],
+							data: [null,null],
+							form: null,
+							error: null
+						});
+					});
+				}
+			</script>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>The Unified Model Binary Format</title>
+
+		<link href="./_app/immutable/assets/0.CTWn1aWY.css" rel="stylesheet">
+		<link rel="modulepreload" href="./_app/immutable/entry/start.YitcgU9W.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/hjUjaVub.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/Dwu8Ck43.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/CLTqvKWG.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/D0iwhpLH.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/CrGcBvKj.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/BgPb-EuE.js">
+		<link rel="modulepreload" href="./_app/immutable/entry/app.BJPbCFXA.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/BQo6OqOv.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/EdPZLQ7C.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/Bq0eJJNz.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/DOarqXuo.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/DajOXZ9i.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/Bkgstq1j.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/BPc-ykxE.js">
+		<link rel="modulepreload" href="./_app/immutable/nodes/0.B5OrwuZW.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/CCN1Y69L.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/CP9jtjPq.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/CzNagXiF.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/C4tcWgQn.js">
+		<link rel="modulepreload" href="./_app/immutable/chunks/CYekDBCk.js">
+		<link rel="modulepreload" href="./_app/immutable/nodes/4.CmrABCBg.js"><!--12qhfyh--><link rel="stylesheet" href="styles.css"/> <link rel="icon" href="/_app/immutable/assets/favicon.DWX4Q9z0.svg"/><!---->
+	</head>
+	<body data-sveltekit-preload-data="hover">
+		<div style="display: contents"><!--[--><!--[--><!----><nav class="svelte-11lpkcp"><div class="inner svelte-11lpkcp"><div id="logo-container" class="svelte-11lpkcp"><img src="logo_flat.svg" height="30px" id="logo-icon" class="svelte-11lpkcp"/><a id="logo" href="./" class="svelte-11lpkcp">UMB</a></div> <div class="mobile-icon svelte-11lpkcp"><div class="middle-line svelte-11lpkcp"></div></div> <ul class="navbar-list svelte-11lpkcp"><li id="logo-mobile" class="svelte-11lpkcp"><a href="./" class="svelte-11lpkcp">Home</a></li> <!--[--><li class="svelte-11lpkcp"><a href="umbi" class="svelte-11lpkcp">UMBI</a></li><li class="svelte-11lpkcp"><a href="tools" class="svelte-11lpkcp">Tools</a></li><li class="svelte-11lpkcp"><a href="observatory" class="svelte-11lpkcp">Observatory</a></li><li class="svelte-11lpkcp"><a href="spec" class="svelte-11lpkcp">Standard</a></li><!--]--></ul></div></nav><!----> <!----><div class="content"><h1 id="about">About</h1> <h2 id="about-the-unified-model-binary-umb-standard">About the Unified
+Model Binary (UMB) Standard</h2> <p>The <em>Unified Model Binary (UMB)</em> standard represents a
+significant advancement in modeling techniques, establishing a common
+language for diverse models while excluding symbolic representations for
+clarity and focus. Designed to express the least common multiple of
+various models, UMB ensures comprehensive support for a wide range of
+scenarios, with a commitment to mathematical precision and usability. By
+utilizing standard primitive data structures in a JSON format, UMB
+achieves a unique balance of expressiveness, speed, and
+conciseness—positioning it as an efficient tool for model
+representation.</p> <hr/> <h2 id="ecosystem-surrounding-umb">Ecosystem Surrounding UMB</h2> <p>UMB is supported by a robust ecosystem that includes <em>UMBI</em>,
+its reference implementation, which enhances user experience by
+providing tools for model conversion and input. The collaborative
+framework surrounding UMB features support from multiple observatories
+that facilitate integration with various modeling tools and
+environments. This infrastructure allows users to leverage UMB’s
+capabilities seamlessly, exploring previously unattainable modeling
+possibilities and enhancing overall usability.</p> <h2 id="use-cases-and-consequences">Use Cases and Consequences</h2> <p>The UMB format and its ecosystem unlock numerous capabilities for
+both users and researchers in the field of <a href="https://prismmodelchecker.org/lectures/pmc/">Probabilistic Model
+Checking (PMC)</a>. Below are some notable scenarios where UMB provides
+significant advantages:</p> <h3 id="benefits-for-users-of-pmc">Benefits for Users of PMC</h3> <ul><li><p><strong>Access to the Entire Ecosystem</strong>: UMB support
+opens doors to tools like <a href="https://github.com/pysmt/pysmt">pySMT</a> and <a href="https://pypi.org/project/PuLP/">PuLP</a>, allowing users to chain
+various tools effortlessly. For instance, a complex model generated by <a href="#">Modest</a> or <a href="https://staminachecker.org">STAMINA</a> can be
+processed using <a href="https://stormchecker.org">Storm</a> and then
+enhanced with player additions via UMBI, with final verification
+conducted in <a href="https://prismmodelchecker.org">PRISM</a>.</p></li> <li><p><strong>Visualization Capabilities</strong>: Users can visualize
+models easily. Many model-visualization tools such as <a href="https://github.com/stormchecker/stormvogel">StormVogel</a> support
+UMB.</p></li> <li><p><strong>Portfolio Approaches</strong>: UMB’s design allows for
+the easy composition and modification of models, making it
+straightforward to implement various modeling approaches—like generating
+biology models from simple equations—where traditional formats like <a href="https://jani-spec.org/">JANI</a> or <a href="https://www.prismmodelchecker.org/manual/ThePRISMLanguage/Introduction">PRISM</a> would struggle.</p></li> <li><p><strong>Ease of Modification</strong>: Users can dynamically
+change models—such as adjusting transition probabilities or
+representation styles—facilitating agile development and
+testing.</p></li> <li><p><strong>Parallelization Potential</strong>: Large models can be
+efficiently distributed across different servers.</p></li></ul> <h3 id="benefits-for-researchers-and-tool-developers">Benefits for
+Researchers and Tool Developers</h3> <ul><li><p><strong>Independent Algorithm Testing</strong>: Researchers can
+conduct fair comparisons of algorithms without the distortions caused by
+state space exploration differences, achieving consistent
+benchmarks.</p></li> <li><p><strong>Prototyping Flexibility</strong>: UMB allows for easy
+prototyping of new model types, broadening the frontiers of
+expressiveness in PMC. If existing tools do not support a desired model,
+UMBI facilitates straightforward solutions for new
+implementations.</p></li> <li><p><strong>Random Model Generation</strong>: The ease of generating
+random models speeds up experimentation and testing, addressing
+inefficiencies in previous systems.</p></li></ul></div><!----><!----> <footer class="svelte-9sff3o"><p>The UMB standard is an open probabilistic model checking standard for explicit representation of DTMCs, CTMCs, MDPs, POMDPs, etc. Any tool is free to implement the standard, and we encourage its adoption. The authors of this standard would like to acknowlege the <a href="https://www.dagstuhl.de/">Schloss Dagstuhl</a> venue, where the idea for UMB and UMBI was initially concieved.</p> <p>This website was designed and is maintained by <a href="https://jeppson.dev">Josh Jeppson</a>. It is licensed under the GPLv3, and its source code is available on <a href="https://github.com/pmc-dev/umb">GitHub</a>.</p></footer><!----><!----><!--]--> <!--[!--><!--]--><!--]-->
+
+			<script>
+				{
+					__sveltekit_ofn54h = {
+						base: new URL(".", location).pathname.slice(0, -1)
+					};
+
+					const element = document.currentScript.parentElement;
+
+					Promise.all([
+						import("./_app/immutable/entry/start.YitcgU9W.js"),
+						import("./_app/immutable/entry/app.BJPbCFXA.js")
+					]).then(([kit, app]) => {
+						kit.start(app, element, {
+							node_ids: [0, 4],
+							data: [null,null],
+							form: null,
+							error: null
+						});
+					});
+				}
+			</script>
+		</div>
+	</body>
+</html>

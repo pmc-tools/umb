@@ -1,0 +1,1 @@
+import{f as o,a as t}from"./DajOXZ9i.js";import"./CzNagXiF.js";import{aj as e}from"./Dwu8Ck43.js";var m=o('<h1>UMB: A Unified Markov Binary Format</h1> <p>See the <a href="spec.md">specification</a>.</p>',1);function n(a){var r=m();e(2),t(a,r)}export{n as default};

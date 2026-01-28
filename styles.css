@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Vend+Sans:ital,wght@0,300..700;1,300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Iceberg&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
+
+html, body {
+	margin: 0px;
+	padding: 0px;
+	color: #0e0e14;
+	background-color: #fff;
+	font-family: "Vend Sans", sans-serif;
+}
+
+a {
+	text-decoration: none;
+	color: #aa9444;
+	transition: all 1s ease;
+}
+
+a:hover {
+	border-bottom: 1px solid #ffe066;
+}
+
+h1 {
+	border-bottom: 2px solid #ffd747;
+	color: #ffd747;
+	padding: 3px;
+}
+
+code {
+	display: inline-block;
+}
+
+code, .code {
+	font-family: "Ubuntu Mono", monospace;
+	font-size: 10pt;
+	background-color: #f7f7f7;
+	padding: 3px;
+	border: 1px solid #afafaf;
+	border-radius: 5px;
+}
+
+div .code {
+	margin: 10px 0px;
+	padding: 10px;
+}
+
+blockquote, .quote {
+	display: block;
+	color: #383838;
+	border-left: 4px solid #555;
+	margin: 0px;
+	padding: 3px 15px;
+	font-style: italic;
+	transition: all 5s ease;
+}
+
+.code-comment, .comment {
+	color: #398d30;
+}
+
+.code-string, .string {
+	color: #892121;
+}
+
+.code-keyword, .keyword {
+	color: #1f5b89;
+}
+
+.code-function, .function {
+	color: #442189;
+	font-style: italic;
+}
+
+blockquote:hover, .quote:hover {
+	border-left: 4px solid #ffd747;
+}
+
+.content {
+	padding: 20px 20%;
+	min-height: 700px;
+}
+
+pre, code {
+	word-break: break-all !important;
+}
+
+pre {
+	display: block;
+	width: 100%;
+}
