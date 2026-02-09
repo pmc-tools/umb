@@ -14,7 +14,7 @@ It is designed to facilitate the exchange of a wide range of stochastic models, 
 
 Model import and export is already supported by popular probabilistic model checkers:
 
-* [PRISM](https://www.prismmodelchecker.org/publications.php)
+* [PRISM](https://www.prismmodelchecker.org/)
 * [Storm](https://www.stormchecker.org/)
 * [Modest](https://www.modestchecker.net/)
 
