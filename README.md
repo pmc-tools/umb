@@ -26,4 +26,4 @@ There is dedicated tool support in the form of:
 * The [UMB observatory](https://github.com/pmc-tools/umb-observatory/): a shared test environment
   for continuous integration testing of UMB-supporting software. 
 
-For more details, see the formal [specification](spec.md).
+For more details, see the formal [specification](spec.md) or a simple [example](example/README.md).
