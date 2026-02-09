@@ -1,6 +1,6 @@
 # UMB Example
 
-To give a feel for how UMB files encode model,
+To give a feel for how UMB files encode models,
 below is a textual view of the binary file [mdp.umb](mdp.umb),
 which stores in UMB format a simple 4-state Markov decision process,
 with atomic proposition `g`, reward `r` and state variables `x` and `b`.
@@ -31,7 +31,7 @@ A textual view of the UMB file is as follow,
 comprising a JSON metadata file and multiple binary data arrays
 (see the [spec](../spec.md) for details).
 
-```
+```javascript
 /index.json:
 {
   "format-version": 1,
