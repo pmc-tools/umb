@@ -1,6 +1,7 @@
 ---
 title: Specification of the UMB Format
-date: 01/26/2026
+version: 1.0
+date: 05/03/2026
 description: Overall specification of the unified Markov binary format.
 published: true
 ---
@@ -115,7 +116,7 @@ var AnnotationMap = schema(Map.of(/[0-9a-z_-]+/, Annotation)); // maps annotatio
 var Annotation = schema({  
   "?alias": String, // for referencing in external property files etc.; can be any utf-8 string, must be unique among the aliases within the same AnnotationMap element  
   "?description": String, // for pretty-printing/user information/etc.; can be any utf-8 string, not necessarily unique  
-  "applies-to": List.of([ "states", "choices", "branches" ]), // must be non-empty  
+  "applies-to": List.of([ "states", "choices", "branches", "observations", "players"]), // must be non-empty
   "type": Type, // must be of the default size (given explicitly as the value for size or implicitly by omitting size) except for types "rational" and "rational-interval", for which the size must be a positive multiple of 128 and 256, respectively  
   "?lower": Number.min(-2^63).max(2^63-1).step(1), // lower bound for the values of the annotation, for numeric types, omit if the bound does not fit into int64  
   "?upper": Number.min(-2^63).max(2^63-1).step(1), // upper bound for the values of the annotation, for numeric types, omit if the bound does not fit into int64  
