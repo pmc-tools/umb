@@ -105,8 +105,8 @@ var Type = schema({
     "double", // continuous numeric; 64-bit IEEE 754 floating-point number; size is/must always be 64  
     "double-interval", // continuous numeric, interval; size is/must always be 128 (for a 64-bit double lower bound followed by a 64-bit double upper bound)  
     "rational", // continuous numeric; size must be a multiple of 2 (for a size/2-bit int numerator followed by a size/2-bit uint denominator); default size is 128  
-    "rational-interval" // continuous numeric, interval; size must be a multiple of 4 (for a size/2-bit rational lower bound followed by a size/2-bit rational upper bound); default size is 256  
-    "string", // size is/must always be 64 (for a uint64 index into a string mapping)  
+    "rational-interval", // continuous numeric, interval; size must be a multiple of 4 (for a size/2-bit rational lower bound followed by a size/2-bit rational upper bound); default size is 256  
+    "string" // size is/must always be 64 (for a uint64 index into a string mapping)  
   ],  
   "?size": Number.min(1).max(2^32-1).step(1) // the size, in bits, of the type; if absent, use the default size of the type  
 });
